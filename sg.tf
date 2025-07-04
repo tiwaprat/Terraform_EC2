@@ -1,7 +1,7 @@
 resource "aws_security_group" "studentApp_sg" {
   name        = "studentApp_sg"
   description = "Allow TLS inbound traffic and all outbound traffic"
-  vpc_id      = aws_vpc.main.id
+ 
 
   tags = {
     Name = "studentApp_sg"
