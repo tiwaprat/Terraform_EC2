@@ -5,9 +5,9 @@ phases:
       python: 3.8
     commands:
       - echo Installing Terraform...
-      - curl -O https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_arm64.zip
-      - unzip terraform_1.6.0_linux_arm64.zip
-      - mv terraform /usr/local/bin/
+      - sudo yum install -y yum-utils shadow-utils
+      - sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+      - sudo yum -y install terraform
 
   pre_build:
     commands:
