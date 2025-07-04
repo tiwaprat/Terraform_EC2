@@ -16,6 +16,6 @@ phases:
       - terraform init
   build:
     commands:
-      - echo Provisioning infra
+      - echo Provisioning EC2...
       - terraform plan -out=tfplan
       - terraform apply -auto-approve tfplan
