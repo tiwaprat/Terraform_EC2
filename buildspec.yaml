@@ -26,6 +26,7 @@ phases:
   post_build:
     commands:
       - echo "Fetching EC2 Instance ID from Terraform output..."
+      - instance_id=$(terraform output -raw instanceID)
       
      
      
